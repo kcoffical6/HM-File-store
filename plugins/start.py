@@ -77,7 +77,7 @@ async def start_command(client: Client, message: Message):
 
             try:
                 media = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
-                alert = await message.reply('<b><u>ಗಮನಿಸಿ</u>: ಈ ವೀಡಿಯೊವನ್ನು 24 ಗಂಟೆಗಳಲ್ಲಿ ಅಳಿಸಲಾಗುತ್ತದೆ, ನೀವು ಅದನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿರುವಿರಾ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ {first}\n\n<b>{first}\n\n<b><u>Note</u>: This media will be deleted in 24 Hours, make sure you Downloaded It.</b>')
+                alert = await message.reply('<b><u>ಗಮನಿಸಿ</u>: ಈ ವೀಡಿಯೊವನ್ನು 24 ಗಂಟೆಗಳಲ್ಲಿ ಅಳಿಸಲಾಗುತ್ತದೆ, ನೀವು ಅದನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿರುವಿರಾ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ {first}\n\n<b><u>Note</u>: This media will be deleted in 24 Hours, make sure you Downloaded It.</b>')
                 await asyncio.sleep(86400)
                 await media.delete()
                 await alert.delete()
