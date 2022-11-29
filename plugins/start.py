@@ -76,11 +76,18 @@ async def start_command(client: Client, message: Message):
                 reply_markup = None
 
             try:
-                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
-                await asyncio.sleep(0.5)
+                media = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
+                alert = await message.reply('Note: This media will be deleted in 24 Hours, make sure you Downloaded It.')
+                await asyncio.sleep(86400)
+                await media.delete()
+                await alert.delete()
             except FloodWait as e:
                 await asyncio.sleep(e.x)
-                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
+                media = await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
+                alert = await message.reply('Note: This media will be deleted in 24 Hours, make sure you Downloaded It.')
+                await asyncio.sleep(86400)
+                await media.delete()
+                await alert.delete()
             except:
                 pass
         return
