@@ -16,6 +16,9 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    ],
+                    [
+                        InlineKeyboardButton("⚡JOIN CHANNEL⚡", url = "https://t.me/+ozMvFa6su881YmM1")
                     ]
                 ]
             )
