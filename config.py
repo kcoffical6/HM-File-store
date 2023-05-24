@@ -37,7 +37,7 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "╔┓┏╦━━╦┓╔┓╔━━-\n║┗┛║┗━╣┃║┃║ ^ ^ ✦\n║┏┓║┏━╣┗╣┗╣╰╯║\n╚┛┗╩━━╩━╩━╩━━╝\n\n\n\n\n<b>Hello {first}\nI am a bot which will provide you files instantly shared in @Kan_Serial</b>\n\n⚠Kindly Please join Channel / ದಯವಿಟ್ಟು ನನ್ನನ್ನು ಬಳಸಲು ಚಾನಲ್‌ಗೆ ಸೇರಿಕೊಳ್ಳಿ⚠")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "831370530 967367094 928357565").split()):
@@ -46,7 +46,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>Kindly Please join Channel / ದಯವಿಟ್ಟು ನನ್ನನ್ನು ಬಳಸಲು ಚಾನಲ್‌ಗೆ ಸೇರಿಕೊಳ್ಳಿ</b>\n\n\n▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ \n█░▄▄▀██░█████░▄▄▄██░▄▄▀█▄▄░▄▄███░█ \n█░▀▀░██░█████░▄▄▄██░▀▀▄███░█████▄█ \n█░██░██░▀▀░██░▀▀▀██░██░███░█████▀█ \n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
@@ -61,7 +61,7 @@ else:
     DISABLE_CHANNEL_BUTTON = False
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
+USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot! Only sudo users can use me!/n/n/n▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ \n█░▄▄▀██░█████░▄▄▄██░▄▄▀█▄▄░▄▄███░█ \n█░▀▀░██░█████░▄▄▄██░▀▀▄███░█████▄█ \n█░██░██░▀▀░██░▀▀▀██░██░███░█████▀█ \n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(5146534728)
