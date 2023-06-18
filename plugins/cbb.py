@@ -1,5 +1,3 @@
-#(©)Codexbotz
-
 from pyrogram import __version__
 from bot import Bot
 from config import OWNER_ID
@@ -9,8 +7,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
-        await query.message.edit_media(
-            media="https://telegra.ph/file/da2484a78759e5c28ac90.jpg",
+        await query.message.edit_caption(
             caption=f"╭─《 🔰𝔸𝔹𝕆𝕌𝕋 𝕄𝔼🔰 》\n├  CREATOR: <a href='tg://user?id={OWNER_ID}'>🅷🅸🆃🅻🅴🆁</a>\n├  CHANNEL: <a href='https://t.me/Kan_Serial'>Serial Adda</a>\n├ LANGUAGE USED: Python\n╰  𝐓𝐇𝐀𝐍𝐊 𝐘𝐎𝐔❤️",
             reply_markup=InlineKeyboardMarkup(
                 [
